@@ -4,6 +4,7 @@ import { useBlog } from '../context/BlogContext';
 import { useTypewriter, useScrollReveal, useTilt, useParallax, useCounter } from '../hooks/useInteractive';
 import ParticleCanvas from '../components/ParticleCanvas';
 import './Home.css';
+import photo from '../assets/photo.jpg';
 
 // ─── Skill data with proficiency levels ──────────────────────────────────────
 const SKILLS = [
@@ -217,13 +218,13 @@ solutions. Strong background in NLP, prompt engineering, and developing producti
                 3. That's it — the image will appear here automatically
               */}
               <img
-                src="/photo.jpg"
+                src={photo}
                 alt="Harshith K S"
                 style={{
                   width: '100%',
                   height: '100%',
                   objectFit: 'cover',
-                   objectPosition: 'center 20%',
+                  objectPosition: 'center 20%',
                   borderRadius: '50%',
                 }}
               />
