@@ -1,0 +1,39 @@
+.post-page { padding: 48px 0 100px; }
+
+.post-back { margin-bottom: 36px; padding-left: 0; }
+
+.post-header { margin-bottom: 32px; }
+
+.post-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
+
+.post-title {
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  margin-bottom: 18px;
+  color: var(--text);
+}
+
+.post-excerpt {
+  font-size: 17px;
+  color: var(--text-2);
+  line-height: 1.7;
+  margin-bottom: 20px;
+  max-width: 600px;
+}
+
+.post-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--text-4);
+  letter-spacing: 0.04em;
+}
+.post-meta-dot { color: var(--border-light); }
+
+.post-content { margin-bottom: 16px; }
+
+.post-footer { margin-top: 64px; }
