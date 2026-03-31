@@ -66,10 +66,17 @@ The application is divided into two main parts:
   - Project structure
 - Generated documentation (README)
 
-### 2. GitHub Copilot *(if used)*
-- Helped with:
-  - Auto-completing functions
-  - Suggesting React hooks and logic
+### 2. Claude
+- Used to design and refine the Admin Dashboard UI, including blog post creation and editing forms
+- Assisted in building React component architecture for the portfolio layout (Skills, Projects, Blog sections)
+- Helped implement CRUD operation logic for the Blog Management System (create, update, delete handlers)
+- Debugged state management issues in React and resolved async data-fetching errors
+- Provided guidance on Firebase/Supabase integration for real-time blog data storage and retrieval
+- Suggested improvements to CSS responsiveness across mobile, tablet, and desktop breakpoints
+- Helped write clean, modular Express route handlers for backend API endpoints
+- Assisted in setting up Vercel deployment configuration and resolving build errors
+- Reviewed and improved overall code quality, naming conventions, and component reusability
+
 
 ---
 
@@ -85,8 +92,8 @@ The application is divided into two main parts:
 
 ## 📊 AI vs Manual Code Contribution
 
-- **AI-generated code:** 40%  
-- **Manually written code:** 60%  
+- **AI-generated code:** 70% 
+- **Manually written code:** 30%  
 
 > All AI-generated code was carefully reviewed, modified, and tested before integration.
 
@@ -102,9 +109,3 @@ Yes, I ensured full understanding of all AI-assisted code:
 
 ---
 
-## 📦 Installation & Setup
-
-### 1. Clone the repository
-```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
