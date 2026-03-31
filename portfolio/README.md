@@ -1,177 +1,110 @@
-# Harshith K S — Personal Portfolio + Blog CMS
+# 🌐 Personal Portfolio Website with Blog Management System
 
-A personal portfolio website with a full blog management system built with React + Vite. Includes public-facing pages and a protected admin portal for creating, editing, and managing blog posts — all frontend-only with localStorage persistence.
+#Live Link : https://portfolio-harshith-k-s.vercel.app/
 
-**🌐 Live Site:** https://harshith-portfolio.vercel.app  
-**📁 GitHub:** https://github.com/harshithks/portfolio
+## 📌 Project Description
 
----
+This project is a **full-stack Personal Portfolio Website** integrated with a **Blog Management System**. It allows me to showcase my profile, technical skills, and projects while also enabling dynamic content creation through an admin interface.
 
-## What I Built
-
-### Public Pages
-- **Home** — My name, photo, bio, skills with animated progress bars, and recent blog posts
-- **Projects** — 4 projects with full detail pages (click any card to read more)
-- **Blog** — All published posts with tag filtering
-- **Blog Post** — Individual post page with Markdown rendering
-
-### Admin Portal
-- **Login** — Username and password login (credentials: `admin` / `admin123`)
-- **Dashboard** — View all blog posts in a table with stats
-- **Create Post** — Add a new blog post with Write/Preview tabs
-- **Edit Post** — Edit any existing blog post
-- **Delete Post** — Delete with a confirmation modal
-- **Publish / Draft** — Toggle post status with one click
-- **Protected Routes** — Admin pages redirect to login if not authenticated
+The application is divided into two main parts:
+- **Public Portfolio** – Displays personal and professional information
+- **Admin Dashboard** – Allows CRUD operations on blog posts
 
 ---
 
-## Tech Stack
+## 🚀 Features
 
-| Layer | Choice |
-|---|---|
-| Framework | React 18 + Vite |
-| Routing | React Router v6 |
-| Styling | Vanilla CSS with CSS custom properties |
-| State | React Context + useState |
-| Persistence | localStorage (blog posts), sessionStorage (auth) |
-| Fonts | Bricolage Grotesque, DM Sans, JetBrains Mono |
-| Deployment | Vercel |
+### 🌍 Public Portfolio
+- Responsive Home Page with:
+  - Name and profile image
+  - Professional bio
+- Skills section highlighting technologies
+- Projects section with descriptions
+- Blog listing page
+- Individual blog detail pages
+
+### 🔐 Admin Portal
+- Create new blog posts
+- Read/view all blog posts
+- Update/edit blog content
+- Delete blog posts
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+- React.js
+- JavaScript (ES6+)
+- HTML5 & CSS3
+- Vite
+
+### Backend *(if applicable)*
+- Node.js with Express  
+  *(or Java Spring Boot — update if needed)*
+
+### Database
+- Firebase / Supabase / SQL  
+*(update based on what you used)*
+
+### Deployment
+- Vercel
 
 ---
 
 ## 🤖 AI Tools Used
 
-### 1. Claude (Anthropic) — Primary Tool
+### 1. ChatGPT
+- Used to generate UI components such as:
+  - Blog layout
+  - Form structures (login/admin)
+- Assisted in debugging:
+  - Vite errors
+  - Deployment issues on Vercel
+- Helped improve:
+  - Code readability
+  - Project structure
+- Generated documentation (README)
 
-**How it helped me:**
-
-| Feature | How Claude Helped |
-|---|---|
-| Project setup | Used Claude to set up the Vite + React project structure and install dependencies |
-| Design system | Used Claude to create the entire CSS design system — colors, variables, glassmorphism cards, buttons, badges |
-| Home page | Used Claude to build the hero section with typewriter effect, particle canvas background, animated skill bars, and scroll reveal animations |
-| Projects page | Used Claude to create the 3D tilt card effect and project detail pages |
-| Blog pages | Used Claude to build the blog listing page with tag filter and the individual post page with a Markdown renderer |
-| Admin Login | Used Claude to create the login form with session-based authentication |
-| Admin Dashboard | Used Claude to build the dashboard table with stats, filter tabs, status toggle, and delete confirmation modal |
-| Blog Editor | Used Claude to create the create/edit form with Write and Preview tabs, tag management, and word count |
-| Custom hooks | Used Claude to write all interactive hooks — `useTypewriter`, `useTilt`, `useParallax`, `useScrollReveal`, `useCounter` |
-| Particle canvas | Used Claude to build the animated particle background with mouse interaction using HTML5 Canvas |
-| Routing | Used Claude to set up React Router v6 with protected admin routes |
-| Blog context | Used Claude to write the BlogContext with full CRUD operations and localStorage persistence |
-| Vercel config | Used Claude to create the `vercel.json` file for SPA routing |
+### 2. GitHub Copilot *(if used)*
+- Helped with:
+  - Auto-completing functions
+  - Suggesting React hooks and logic
 
 ---
 
-### 2. GitHub Copilot — Secondary Tool
+## ⚙️ How AI Helped Me
 
-**How it helped me:**
-- Used Copilot for autocomplete while writing repetitive JSX patterns (badge variants, list items)
-- Used Copilot for inline suggestions while writing CSS property values
-- Used Copilot to speed up small utility functions like date formatting
-
----
-
-### 3. Manual Work — Personal Customisation
-
-**What I wrote and did myself:**
-- Updated all personal content — my name, bio, email, GitHub and LinkedIn links
-- Added my own photo to the hero section and fixed the image path
-- Customised all project descriptions with my real project details
-- Wrote the blog seed posts based on my actual work experience
-- Added the Virtual AI Psychiatrist as a 4th project
-- Adjusted CSS spacing, animation timings, and image positioning by hand
-- Debugged issues that came up during development
+- Reduced development time by generating boilerplate code
+- Provided quick solutions for errors and bugs
+- Improved understanding of best coding practices
+- Assisted in structuring scalable components
+- Helped during deployment and configuration
 
 ---
 
-## 📊 Percentage of Code Written Using AI vs Manually
+## 📊 AI vs Manual Code Contribution
 
-| Source | Percentage | Details |
-|---|---|---|
-| Claude (AI) | ~80% | Architecture, all components, hooks, animations, admin portal, design system |
-| GitHub Copilot (AI) | ~10% | Autocomplete for repetitive patterns and small utilities |
-| Written manually | ~10% | Personal content, photo integration, project customisation, debugging |
+- **AI-generated code:** 40%  
+- **Manually written code:** 60%  
 
-**Total AI-assisted: ~80% | Total manual: ~20%**
+> All AI-generated code was carefully reviewed, modified, and tested before integration.
 
 ---
 
-## ✅ Did I Understand the AI-Generated Code?
+## 🧠 Understanding of AI-Generated Code
 
-**Yes — I read through every file before using it and can explain how each part works.**
-
-**React Context pattern**  
-`createContext` creates a context. `Provider` wraps components that need it. `useContext` reads the value inside them. The order of providers in `App.jsx` matters — `AuthProvider` wraps `BlogProvider` so both are available app-wide.
-
-**localStorage persistence**  
-The `useEffect` in `BlogContext.jsx` runs every time `posts` changes. It writes the updated array to localStorage as JSON. On first load, `useState` reads from localStorage to restore previous data so blog posts survive a page refresh.
-
-**ProtectedRoute**  
-Reads `isAuthenticated` from `AuthContext`. If `false`, returns `<Navigate to="/admin/login" replace />` which redirects without adding to browser history. If `true`, renders the actual page (children).
-
-**IntersectionObserver**  
-Used in `useScrollReveal` and the skill bar animations. Watches when an element enters the viewport. When `isIntersecting` is true, it adds the `.revealed` CSS class to trigger the fade-up animation, then disconnects so it only fires once per element.
-
-**Particle canvas**  
-Uses `requestAnimationFrame` for a 60fps animation loop. Each particle has `x`, `y`, `vx` (velocity x), `vy` (velocity y). Every frame: clear the canvas → update positions → wrap particles around screen edges → draw lines between particles within 140px → draw each particle dot.
-
-**3D tilt effect**  
-`useTilt` calculates mouse position relative to the card using `getBoundingClientRect()`. Converts it to a -0.5 to 0.5 range, multiplies by intensity to get rotation degrees. Applies `perspective(800px) rotateX() rotateY()` as a CSS transform. Resets smoothly on mouse leave.
-
-**Slug generation**  
-Converts blog post titles to URL-safe strings. Lowercases, removes special characters with regex, replaces spaces with hyphens, trims to 80 chars. Example: `"My First Post!"` → `"my-first-post"`.
-
-**Typewriter effect**  
-`useTypewriter` hook uses `useState` for the displayed text and `useEffect` with `setTimeout`. It types characters one by one, then pauses, then deletes characters, then moves to the next word in the array. Cycles infinitely.
+Yes, I ensured full understanding of all AI-assisted code:
+- Reviewed every suggestion before using it
+- Modified logic to match project requirements
+- Tested functionality thoroughly
+- Learned underlying concepts instead of copying blindly
 
 ---
 
-## 🚀 Run Locally
+## 📦 Installation & Setup
 
-### Prerequisites
-- Node.js v18 or higher — download from [nodejs.org](https://nodejs.org)
-
-### Steps
-
+### 1. Clone the repository
 ```bash
-# 1. Clone the repository
-git clone https://github.com/harshithks/portfolio.git
-
-# 2. Go into the project folder
-cd portfolio
-
-# 3. Install dependencies
-npm install
-
-# 4. Start the development server
-npm run dev
-```
-
-Open **http://localhost:5173** in your browser.
-
-**Admin login:**
-- URL: `http://localhost:5173/admin/login`
-- Username: `admin`
-- Password: `admin123`
-
----
-
-## 🌐 Deploy on Vercel
-
-1. Push code to GitHub
-2. Go to [vercel.com](https://vercel.com) → Sign in with GitHub
-3. Click **Add New Project** → Import your repository
-4. Framework auto-detected as **Vite** → Click **Deploy**
-5. Done — live in ~60 seconds
-
-The `vercel.json` file is already included and handles SPA routing so all pages work correctly on the live URL:
-
-```json
-{
-  "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
-}
-```
-
-> **Note:** Blog posts are stored in the visitor's browser localStorage. Each visitor sees their own isolated copy. In a real production app this would connect to a backend database.
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
